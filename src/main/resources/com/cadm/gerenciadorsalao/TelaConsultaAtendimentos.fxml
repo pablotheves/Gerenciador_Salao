@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cadm.gerenciadorsalao.TelaConsultaAtendimentosController">
+   <children>
+      <TableView fx:id="tableViewAtend" layoutX="40.0" layoutY="93.0" prefHeight="280.0" prefWidth="516.0">
+        <columns>
+          <TableColumn fx:id="tableColumnCod" prefWidth="71.0" text="Código" />
+          <TableColumn fx:id="tableColumnNome" prefWidth="98.0" text="Nome" />
+            <TableColumn fx:id="tableColumnDataHora" prefWidth="119.0" text="DataHora" />
+            <TableColumn fx:id="tableColumnObservacoes" prefWidth="227.0" text="Observacoes" />
+        </columns>
+      </TableView>
+      <Label layoutX="530.0" layoutY="34.0" text="test" />
+      <HBox layoutX="40.0" layoutY="31.0" prefHeight="53.0" prefWidth="396.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnAddAtend" mnemonicParsing="false" prefHeight="47.0" prefWidth="119.0" text="NOVO" />
+            <Button fx:id="btnExcAtend" mnemonicParsing="false" prefHeight="47.0" prefWidth="119.0" text="EXCLUIR" />
+            <Button fx:id="btnClientes" mnemonicParsing="false" prefHeight="47.0" prefWidth="153.0" text="CLIENTES" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

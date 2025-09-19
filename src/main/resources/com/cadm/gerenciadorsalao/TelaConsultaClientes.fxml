@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.cadm.gerenciadorsalao.TelaConsultaClientesController">
+   <children>
+      <TableView fx:id="tableViewClientes" layoutX="33.0" layoutY="86.0" prefHeight="279.0" prefWidth="535.0">
+        <columns>
+          <TableColumn fx:id="tableColumnNome" prefWidth="75.0" text="Nome" />
+          <TableColumn fx:id="tableColumnCpf" prefWidth="75.0" text="CPF" />
+            <TableColumn fx:id="tableColumnTelefone" prefWidth="75.0" text="Telefone" />
+        </columns>
+      </TableView>
+      <HBox layoutX="33.0" layoutY="23.0" prefHeight="63.0" prefWidth="427.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" prefHeight="47.0" prefWidth="119.0" text="NOVO" />
+            <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="47.0" prefWidth="119.0" text="EDITAR" />
+            <Button fx:id="btnExcluir" mnemonicParsing="false" prefHeight="47.0" prefWidth="119.0" text="EXCLUIR" />
+         </children>
+      </HBox>
+      <Label layoutX="548.0" layoutY="14.0" text="test" />
+   </children>
+</AnchorPane>
