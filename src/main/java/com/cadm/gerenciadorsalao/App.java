@@ -1,4 +1,3 @@
-
 package com.cadm.gerenciadorsalao;
 
 import javafx.application.Application;
