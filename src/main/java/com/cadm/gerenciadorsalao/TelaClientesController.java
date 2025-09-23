@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.classes.Clientes;
 import model.classes.Pessoas;import model.services.PessoasServices;
@@ -23,7 +24,7 @@ import model.classes.Pessoas;import model.services.PessoasServices;
  *
  * @author aluno
  */
-public class TelaConsultaClientesController implements Initializable {
+public class TelaClientesController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -51,6 +52,15 @@ public class TelaConsultaClientesController implements Initializable {
 
     @FXML
     private Button btnExcluir;
+    
+    @FXML 
+    private TextField txtCpf;
+    
+    @FXML 
+    private TextField txtNome;
+    
+    @FXML 
+    private TextField txtTelefone;
     
     private ObservableList<Pessoas> listaTabela;
 

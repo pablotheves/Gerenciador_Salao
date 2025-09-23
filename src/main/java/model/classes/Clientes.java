@@ -39,7 +39,11 @@ public class Clientes extends Pessoas{
     public Clientes(String cpf, String nome, String telefone) {
         super(cpf, nome, telefone);
     }
-
+    
+    public void teste(){
+        
+    }
+    
     @Override
     public String toString() {
         return "Clientes{" + " cpf: " + cpf + " nome: " + "telefone: " + telefone + '}';

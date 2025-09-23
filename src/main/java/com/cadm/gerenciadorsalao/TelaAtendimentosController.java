@@ -30,7 +30,7 @@ import model.services.AtendimentosServices;
  *
  * @author aluno
  */
-public class TelaConsultaAtendimentosController implements Initializable {
+public class TelaAtendimentosController implements Initializable {
 
     /**
      * Initializes the controller class.
