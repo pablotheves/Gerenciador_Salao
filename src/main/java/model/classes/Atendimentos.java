@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  *
@@ -78,4 +79,23 @@ public class Atendimentos {
         return "Atendimentos{" + "data=" + dataHora + ", observacoes=" + observacoes + '}';
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(codAtendimento);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Atendimentos other = (Atendimentos) obj;
+        return Objects.equals(this.codAtendimento, other.codAtendimento);
+    }
 }

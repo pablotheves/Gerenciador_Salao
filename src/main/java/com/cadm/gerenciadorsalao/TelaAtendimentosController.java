@@ -7,8 +7,10 @@ package com.cadm.gerenciadorsalao;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,40 +45,32 @@ public class TelaAtendimentosController implements Initializable {
 
     @FXML
     private TableColumn<Atendimentos, String> tableColumnNome;
-    
+
     @FXML
     private TableColumn<Atendimentos, LocalDateTime> tableColumnDataHora;
-    
+
     @FXML
     private TableColumn<Atendimentos, String> tableColumnObservacoes;
-    
+
     private ObservableList<Atendimentos> listaTabela;
 
     @FXML
-    private Button btnClientes;
-
-    @FXML
     private Button btnAddAtend;
+    
 
     @FXML
     private Button btnExcAtend;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         
         tableColumnCod.setCellValueFactory(new PropertyValueFactory<>("codAtendimento"));
         tableColumnNome.setCellValueFactory(new PropertyValueFactory<>("nomeAtend"));
         tableColumnDataHora.setCellValueFactory(new PropertyValueFactory<>("dataHora"));
         tableColumnObservacoes.setCellValueFactory(new PropertyValueFactory<>("observacoes"));
-        
-        atualizarTabela();
-        var lista = new AtendimentosServices().getAll();
-        System.out.println("Total de atendimentos carregados: " + lista.size());
 
-        listaTabela = FXCollections.observableArrayList(lista);
-        tableViewAtend.setItems(listaTabela);
-        
+        atualizarTabela();
+
         btnAddAtend.setOnAction((t) -> {
             try {
                 Parent parent = FXMLLoader.load(getClass().getResource("TelaCadastroAtendimento.fxml"));
@@ -85,14 +79,13 @@ public class TelaAtendimentosController implements Initializable {
                 stage.setTitle("Cadastro de Atendimentos");
                 stage.setScene(scene);
                 stage.show();
-                
+
 //                Parent parent = FXMLLoader.load(getClass().getResource("TelaVendedores.fxml"));
 //                Scene scene = new Scene(parent);
 //                Stage stage = new Stage();
 //                stage.setTitle("Consulta de Vendedores");
 //                stage.setScene(scene);
 //                stage.show();
-                
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -120,27 +113,30 @@ public class TelaAtendimentosController implements Initializable {
 
         });
 
-        btnClientes.setOnAction((t) -> {
-            try {
-                Parent parent = FXMLLoader.load(getClass().getResource("TelaCadastroCliente.fxml"));
-                Scene scene = new Scene(parent);
-                Stage stage = new Stage();
-                stage.setTitle("Cadastro de Clientes");
-                stage.setScene(scene);
-                stage.show();
-
-            } catch (IOException ex) {
-                ex.printStackTrace();
-            }
-        });
-
+//        btnClientes.setOnAction((t) -> {
+//            try {
+//                Parent parent = FXMLLoader.load(getClass().getResource("TelaCadastroCliente.fxml"));
+//                Scene scene = new Scene(parent);
+//                Stage stage = new Stage();
+//                stage.setTitle("Cadastro de Clientes");
+//                stage.setScene(scene);
+//                stage.show();
+//
+//            } catch (IOException ex) {
+//                ex.printStackTrace();
+//            }
+//        });
+        
     }
 
     public void atualizarTabela() {
         // associando lista a tabela utilizando um ObservableList
-        listaTabela = FXCollections.observableArrayList(new AtendimentosServices().getAll());
+        List<Atendimentos> listaAtend = new AtendimentosServices().getAll();
+        listaTabela = FXCollections.observableArrayList(listaAtend);
         tableViewAtend.setItems(listaTabela);
 
+        System.out.println("Total de atendimentos carregados: " + listaAtend.size());
+        tableViewAtend.refresh(); 
     }
 
 }

@@ -53,14 +53,7 @@ public class Tela1Controller implements Initializable {
                 stage.setTitle("Consulta de Atendimentos");
                 stage.setScene(scene);
                 stage.show();
-                
-//                Parent parent = FXMLLoader.load(getClass().getResource("TelaVendedores.fxml"));
-//                Scene scene = new Scene(parent);
-//                Stage stage = new Stage();
-//                stage.setTitle("Consulta de Vendedores");
-//                stage.setScene(scene);
-//                stage.show();
-                
+               
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -83,7 +76,7 @@ public class Tela1Controller implements Initializable {
 
     private void timeNow() {//mostrar o horário
         Thread thread = new Thread(() -> {
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
             while (!stop) {
                 try {
                     Thread.sleep(1000);
