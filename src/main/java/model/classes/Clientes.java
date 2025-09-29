@@ -10,6 +10,7 @@ package model.classes;
  */
 public class Clientes extends Pessoas{
 
+
     public String getCpf() {
         return cpf;
     }

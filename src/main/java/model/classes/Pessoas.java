@@ -8,7 +8,7 @@ public abstract class Pessoas {
     protected String cpf;
     protected String nome;
     protected String telefone;
-    
+    protected String tipo;
 
     public Pessoas(String cpf, String nome, String telefone) {
         this.cpf = cpf;

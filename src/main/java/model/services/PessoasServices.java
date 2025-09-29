@@ -21,15 +21,12 @@ public class PessoasServices {
         return dao.getAll();        
     }
     
-    public boolean inserir(Pessoas p){
-        
-        return dao.inserir(p);            
-        
-    }
-    
-    public boolean editar(Pessoas p){
-        return dao.editar(p);
-        
+    public boolean salvarOuAtualizar(Pessoas pessoa) {
+        if (pessoa.getCpf() == null) {
+            return dao.inserir(pessoa);
+        } else {
+            return dao.editar(pessoa);
+        }
     }
     
     public boolean excluir(Pessoas p){
