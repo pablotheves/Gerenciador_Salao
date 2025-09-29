@@ -50,7 +50,7 @@ public class Tela1Controller implements Initializable {
                 Parent parent = FXMLLoader.load(getClass().getResource("TelaConsultaAtendimentos.fxml"));
                 Scene scene = new Scene(parent);
                 Stage stage = new Stage();
-                stage.setTitle("Consulta de Atendimentos");
+                stage.setTitle("Consulta de Atendimentos.");
                 stage.setScene(scene);
                 stage.show();
                
