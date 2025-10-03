@@ -6,7 +6,7 @@ package model.classes;
 
 /**
  *
- * @author aluno
+ * @author pablo
  */
 public class Clientes extends Pessoas{
 
