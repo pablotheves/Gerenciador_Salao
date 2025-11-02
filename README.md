@@ -27,12 +27,14 @@ Projeto de um sistema desktop para gerenciamento de um salão de beleza, desenvo
 | Tela Principal | Tela de Clientes |
 | :---: | :---: |
 | *(Imagem da tela1.fxml)* | *(Imagem da TelaConsultaClientes.fxml)* |
-| ![Tela Principal](URL_DA_SUA_IMAGEM_AQUI) | ![Tela Clientes](URL_DA_SUA_IMAGEM_AQUI) |
+| ![Tela Clientes - DADOS FICCIONAIS](<img width="781" height="711" alt="clientes" src="https://github.com/user-attachments/assets/b7c60101-b9da-41d6-8a5e-f4babb243bd2" />
+) |
 
 | Tela de Atendimentos |
 | :---: |
 | *(Imagem da TelaConsultaAtendimentos.fxml)* |
-| ![Tela Atendimentos](URL_DA_SUA_IMAGEM_AQUI) |
+| ![Tela Atendimentos](<img width="847" height="777" alt="atendimentos" src="https://github.com/user-attachments/assets/c464c4ef-e2cd-4b03-810d-323411324391" />
+) |
 
 ## 🛠️ Tecnologias Utilizadas
 
