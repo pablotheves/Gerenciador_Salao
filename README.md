@@ -22,16 +22,9 @@ Projeto de um sistema desktop para gerenciamento de um salão de beleza, desenvo
 
 ## 📸 Screenshots
 
-
-| Tela de Clientes |
-| :---: |
-| [Tela Clientes - DADOS FICCIONAIS]<img width="781" height="711" alt="clientes" src="https://github.com/user-attachments/assets/b7c60101-b9da-41d6-8a5e-f4babb243bd2" />
-
-| Tela de Atendimentos |
-| :---: |
-| ![Tela Atendimentos]<img width="847" height="777" alt="atendimentos" src="https://github.com/user-attachments/assets/c464c4ef-e2cd-4b03-810d-323411324391" />
-
-
+| Tela de Clientes | Tela de Atendimentos |
+| :---: | :---: |
+| [Tela Clientes - DADOS FICCIONAIS]<img width="781" height="711" alt="clientes" src="https://github.com/user-attachments/assets/b7c60101-b9da-41d6-8a5e-f4babb243bd2" /> | [Tela Atendimentos]<img width="847" height="777" alt="atendimentos" src="https://github.com/user-attachments/assets/c464c4ef-e2cd-4b03-810d-323411324391" /> |
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Java 11
